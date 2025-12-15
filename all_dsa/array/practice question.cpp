@@ -28,13 +28,13 @@ int main()
             if ((arr[i] + arr[j]) == target)
             {
                 cout << "(" << arr[i] << "," << arr[j] << ")";
-                 int flag=1;
+                int flag = 1;
             }
-            
         }
     }
-    if(flag !=1){
-        cout<<"no such pair found";
+    if (flag != 1)
+    {
+        cout << "no such pair found";
     }
 
     return 0;

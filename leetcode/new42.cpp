@@ -1,3 +1,11 @@
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+
 void reorderList(ListNode* head) {
     if (!head || !head->next) return;
 
@@ -9,7 +17,7 @@ void reorderList(ListNode* head) {
     }
 
     // Reverse second half
-    ListNode* prev = NULL;
+    ListNode* prev = nullptr;
     ListNode* curr = slow->next;
     while (curr) {
         ListNode* next = curr->next;
@@ -17,7 +25,7 @@ void reorderList(ListNode* head) {
         prev = curr;
         curr = next;
     }
-    slow->next = NULL;
+    slow->next = nullptr;
 
     // Merge
     ListNode* first = head;

@@ -1,3 +1,5 @@
+#include <algorithm>
+
 struct TreeNode {
     int val;
     TreeNode *left, *right;
@@ -11,9 +13,9 @@ int height(TreeNode* root) {
     int left = height(root->left);
     int right = height(root->right);
 
-    diameter = max(diameter, left + right);
+    diameter = std::max(diameter, left + right);
 
-    return 1 + max(left, right);
+    return 1 + std::max(left, right);
 }
 
 int diameterOfBinaryTree(TreeNode* root) {

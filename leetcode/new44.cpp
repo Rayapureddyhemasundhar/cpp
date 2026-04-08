@@ -1,3 +1,6 @@
+#include <vector>
+using namespace std;
+
 vector<int> parent;
 
 int find(int x) {

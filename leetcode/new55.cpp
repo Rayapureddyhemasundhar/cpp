@@ -1,3 +1,7 @@
+#include <vector>
+
+using namespace std;
+
 class Solution {
 public:
     bool isValid(vector<vector<char>>& board, int row, int col, char c) {

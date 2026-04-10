@@ -1,10 +1,15 @@
+#include <vector>
+#include <string>
+
+using namespace std;
+
 class TrieNode {
 public:
     TrieNode* children[26];
     string word;
 
     TrieNode() {
-        for (int i = 0; i < 26; i++) children[i] = NULL;
+        for (int i = 0; i < 26; i++) children[i] = nullptr;
         word = "";
     }
 };
@@ -32,7 +37,7 @@ public:
     void dfs(vector<vector<char>>& board, int i, int j, TrieNode* node, vector<string>& result) {
         char c = board[i][j];
 
-        if (c == '#' || node->children[c - 'a'] == NULL)
+        if (c == '#' || node->children[c - 'a'] == nullptr)
             return;
 
         node = node->children[c - 'a'];
